@@ -1,0 +1,23 @@
+$color_primary: #EDC7B7;
+$color_secondary: #EEE2DC;
+$color_tertiary: #BAB2B5;
+$color_blue: #123C69;
+$color_red: #AC3B61;
+
+.food-item{
+    width: 100%;
+    border-radius: 15px;
+    background-color: $color_tertiary;
+    
+    img{
+        width: 100%;
+        height: 60%;
+        border-radius: 15px 15px 0px 0px;
+        margin: 0px;
+    }
+
+    p{
+        color: $color_red;
+    }
+
+}

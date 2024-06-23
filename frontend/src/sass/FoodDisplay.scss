@@ -1,0 +1,17 @@
+$color_primary: #EDC7B7;
+$color_secondary: #EEE2DC;
+$color_tertiary: #BAB2B5;
+$color_blue: #123C69;
+$color_red: #AC3B61;
+
+.food-display{
+    .food-display-title{
+        color: $color_blue;
+    }
+    .food-display-list{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        background-color: $color_secondary;
+    }
+}
