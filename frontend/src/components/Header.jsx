@@ -5,7 +5,7 @@ import '../sass/Header.scss'
 const Header = () => {
   return (
     <div className='header'> 
-        <img src={assets.head_1} alt='' />
+        <img src={assets.head_4} alt='' />
     </div>
   )
 }
