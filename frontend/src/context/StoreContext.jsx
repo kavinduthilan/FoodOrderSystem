@@ -1,11 +1,11 @@
 import { createContext } from 'react';
-import { food_list } from '../assets/assets.js';
+import { food_list, menu_list } from '../assets/assets.js';
 
 export const StoreContext = createContext(null);
 
 const ContextProvider = ({children}) => {
 
-    const contextValue = { food_list };
+    const contextValue = { food_list, menu_list };
     
     console.log('ContextProvider food list :',food_list);
 
