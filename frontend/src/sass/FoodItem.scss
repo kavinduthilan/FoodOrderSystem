@@ -8,6 +8,7 @@ $color_red: #AC3B61;
     width: 100%;
     border-radius: 15px;
     background-color: $color_tertiary;
+    box-shadow: 0px 0px 10px $color_tertiary;
     
     img{
         width: 100%;
@@ -16,8 +17,12 @@ $color_red: #AC3B61;
         margin: 0px;
     }
 
-    p{
-        color: $color_red;
+    .food-item-content{
+        padding-left: 10px;
+
+        p{
+            color: $color_blue;
+        }
     }
 
 }

@@ -3,3 +3,12 @@ $color_secondary: #EEE2DC;
 $color_tertiary: #BAB2B5;
 $color_blue: #123C69;
 $color_red: #AC3B61;
+
+.menu{
+    margin-bottom: 100px;
+    h1{
+        color: $color_blue;
+        padding-bottom: 20px;
+    }
+
+}
