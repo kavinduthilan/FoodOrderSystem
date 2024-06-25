@@ -9,9 +9,11 @@ const FoodItem = ({ image, name, description, price }) => {
     return (
         <div className='food-item'>
             <img src={image} alt='' />
-            <h2 className='food-name'>{name}</h2>
-            <p className='food-description'>{description}</p>
-            <h3 className='food-price'>${price}</h3>                       
+            <div className='food-item-content'>
+                <h2>{name}</h2>
+                <p>{description}</p>
+                <h3>${price}</h3>
+            </div>                    
         </div>
     )
 }
