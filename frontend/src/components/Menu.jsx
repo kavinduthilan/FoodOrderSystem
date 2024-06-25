@@ -1,8 +1,15 @@
 import React from 'react'
 import '../sass/Menu.scss'
-
+import { useContext } from 'react';
+import { StoreContext } from '../context/StoreContext';
 
 const Menu = () => {
+
+  const { menu_list } = useContext(StoreContext);
+  
+  const Clickhere = () => {
+    
+   }
 
   return (
     <div className='menu'>
@@ -18,6 +25,16 @@ const Menu = () => {
               to satisfy your cravings. Dive in and explore the delectable
               options we have to offer!
         </p>
+        <div className='menu-category'>
+        {menu_list.map((item, index) => {
+          return (
+            <div key={index} className='menu-category-item'>
+              <img onClick={Clickhere()} src={item.menu_image} alt='' />
+              <h2>{item.menu_name}</h2>
+            </div>
+            )
+          })}
+        </div>
     </div>
   )
 }

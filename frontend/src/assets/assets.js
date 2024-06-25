@@ -33,13 +33,23 @@ import cart from './shopping-cart.png';
 import head_1 from './head_01.png';
 import head_2 from './head_02.png';
 import head_3 from './head_03.png';
+import head_4 from './head_04.png';
+
+//social media icons
+import facebook from './facebook.png';
+import instagram from './instagram.png';
+import tiktok from './tiktok.png';
 
 export const assets = {
     logo,
     cart,
     head_1,
     head_2,
-    head_3
+    head_3,
+    head_4,
+    facebook,
+    instagram,
+    tiktok
 }
 
 export const menu_list = [
@@ -68,7 +78,7 @@ export const food_list = [
         image: food_1,
         price: 10,
         category: 'Salad',
-        description: 'Fresh romaine lettuce, croutons, parmesan cheese, and caesar dressing',
+        description: 'Fresh romaine lettuce, croutons and caesar dressing',
     },
     {
         _id: 2,
@@ -76,7 +86,7 @@ export const food_list = [
         image: food_2,
         price: 12,
         category: 'Salad',
-        description: 'Fresh romaine lettuce, cucumbers, tomatoes, olives, feta cheese, and greek dressing',
+        description: 'Fresh romaine lettuce, cucumbers, tomatoes and greek dressing',
     },
     {
         _id: 3,
@@ -84,7 +94,7 @@ export const food_list = [
         image: food_3,
         price: 10,
         category: 'Salad',
-        description: 'Fresh romaine lettuce, cucumbers, tomatoes, carrots, and ranch dressing',
+        description: 'Fresh romaine lettuce, cucumbers, tomatoes and ranch dressing',
     },
     {
         _id: 4,
@@ -92,7 +102,7 @@ export const food_list = [
         image: food_4,
         price: 15,
         category: 'Salad',
-        description: 'Fresh romaine lettuce, grilled chicken, cucumbers, tomatoes, and ranch dressing',
+        description: 'Fresh romaine lettuce, grilled chicken and ranch dressing',
     },
     {
         _id: 5,
@@ -100,7 +110,7 @@ export const food_list = [
         image: food_5,
         price: 8,
         category: 'Sandwich',
-        description: 'Freshly baked bread, lettuce, tomatoes, and cheese',
+        description: 'Freshly baked bread, lettuce, tomatoes and cheese',
     },
     {
         _id: 6,
@@ -108,7 +118,7 @@ export const food_list = [
         image: food_6,
         price: 10,
         category: 'Sandwich',
-        description: 'Freshly baked bread, lettuce, tomatoes, cucumbers, and hummus',
+        description: 'Freshly baked bread, lettuce, cucumbers and hummus',
     },
     {
         _id: 7,
@@ -116,7 +126,7 @@ export const food_list = [
         image: food_7,
         price: 10,
         category: 'Sandwich',
-        description: 'Freshly baked bread, lettuce, tomatoes, eggs, and mayo',
+        description: 'Freshly baked bread, lettuce, tomatoes, eggs and mayo',
     },
     {
         _id: 8,
@@ -124,7 +134,7 @@ export const food_list = [
         image: food_8,
         price: 12,
         category: 'Sandwich',
-        description: 'Freshly baked bread, lettuce, tomatoes, grilled chicken, and mayo',
+        description: 'Freshly baked bread, lettuce, grilled chicken and mayo',
     },
     {
         _id: 9,
@@ -132,7 +142,7 @@ export const food_list = [
         image: food_9,
         price: 15,
         category: 'Pizza',
-        description: 'Freshly baked pizza dough, tomato sauce, mozzarella cheese, and pepperoni',
+        description: 'Freshly baked pizza dough, mozzarella cheese and pepperoni',
     },
     {
         _id: 10,
@@ -140,7 +150,7 @@ export const food_list = [
         image: food_10,
         price: 15,
         category: 'Pizza',
-        description: 'Freshly baked pizza dough, tomato sauce, mozzarella cheese, and salami',
+        description: 'Freshly baked pizza dough, mozzarella cheese and salami',
     },
     {
         _id: 11,
@@ -148,7 +158,7 @@ export const food_list = [
         image: food_11,
         price: 15,
         category: 'Pizza',
-        description: 'Freshly baked pizza dough, tomato sauce, vegan cheese, and veggies',
+        description: 'Freshly baked pizza dough, vegan cheese and veggies',
     },
     {
         _id: 12,
@@ -156,7 +166,7 @@ export const food_list = [
         image: food_12,
         price: 20,
         category: 'Pizza',
-        description: 'Freshly baked pizza dough, tomato sauce, mozzarella cheese, pepperoni, salami, and veggies',
+        description: 'Freshly baked pizza dough, mozzarella cheese and veggies',
     },
     {
         _id: 13,
@@ -188,7 +198,7 @@ export const food_list = [
         image: food_16,
         price: 10,
         category: 'Dessert',
-        description: 'Vanilla ice cream with chocolate sauce, whipped cream, and cherry on top',
+        description: 'Vanilla ice cream with chocolate sauce and cherry on top',
     }
     
 ]
