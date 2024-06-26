@@ -28,6 +28,9 @@ import menu_4 from './menu_5.png';
 // add icons here
 import logo from './logo.png';
 import cart from './shopping-cart.png';
+import add_icon_green from './add_icon_green.png';
+import remove_icon from './remove_icon_red.png';
+import add_icon_white from './add_icon_white.png';
 
 // add header images here
 import head_1 from './head_01.png';
@@ -43,6 +46,9 @@ import tiktok from './tiktok.png';
 export const assets = {
     logo,
     cart,
+    add_icon_green,
+    add_icon_white,
+    remove_icon,
     head_1,
     head_2,
     head_3,
