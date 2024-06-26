@@ -16,6 +16,7 @@ const FoodDisplay = () => {
                 return(
                     <FoodItem
                         key={index}
+                        id={item._id}
                         name={item.name}
                         image={item.image}
                         description={item.description}
