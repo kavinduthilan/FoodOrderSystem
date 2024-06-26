@@ -19,9 +19,35 @@ $color_red: #AC3B61;
 
     .food-item-content{
         padding-left: 10px;
+        position: relative;
 
         p{
             color: $color_blue;
+        }
+
+        .add{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            right: 10px;
+            bottom: 5px;
+        }
+
+        .food-item-amount{
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            padding: 10px 0px;
+            position: absolute;
+            bottom: 4px;
+            right: 10px;
+
+            button{
+                background-color: $color_primary;
+                border: 1px solid $color_red;
+                border-radius: 5px;
+                padding: 5px;
+            }
         }
     }
 
