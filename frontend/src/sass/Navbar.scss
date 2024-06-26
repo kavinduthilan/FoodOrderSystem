@@ -29,9 +29,21 @@ $color_red: #AC3B61;
         align-items: center;
 
         .cart{
+            position: relative;
+
             img{
                 width: 30px;
                 height: 30px;
+            }
+
+            .dot{
+                position: absolute;
+                width:10px;
+                height: 10px;
+                border-radius: 5px;
+                background-color: $color_red;
+                top:-8px;
+                right: -8px;
             }
         }
 
@@ -40,6 +52,7 @@ $color_red: #AC3B61;
             border: 1px solid $color_red;
             border-radius: 5px;
             padding: 10px;
+            margin-left: 20px;
         }
     }
 }
