@@ -3,17 +3,20 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Menu from "./components/Menu";
 import Navbar from "./components/Navbar";
+import { useState } from "react";
 
 
 
 function App() {
+
+  const [category, setCategory] = useState("All");
   return (
     <>
       <div className="app">
         <Navbar />
         <Header />
-        <Menu />
-        <FoodDisplay />
+        <Menu category={category} setCategory={setCategory}/>
+        <FoodDisplay category={category}/>
       </div>
         <Footer />
     </>
