@@ -3,7 +3,7 @@ import { StoreContext } from '../context/StoreContext';
 import FoodItem from './FoodItem';
 import '../sass/FoodDisplay.scss'
 
-const FoodDisplay = () => {
+const FoodDisplay = ({category}) => {
   
     const { food_list } = useContext(StoreContext);
     console.log('FoodDisplay food list:',food_list);
@@ -12,7 +12,9 @@ const FoodDisplay = () => {
         <div className='food-display'>
         <h1 className='food-display-title'>Our top dishes</h1>        
         <div className='food-display-list'>
-            {food_list.map((item, index) => {
+                {food_list.map((item, index) => {
+                
+                if(category ==="All" || category === item.category){
                 return(
                     <FoodItem
                         key={index}
@@ -22,7 +24,8 @@ const FoodDisplay = () => {
                         description={item.description}
                         price={item.price}
                     />
-                )
+                    )
+                }
             })}
         </div>        
     </div>    
