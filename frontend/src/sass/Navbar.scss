@@ -18,11 +18,20 @@ $color_red: #AC3B61;
     }
 
     .navbar-menu{
+        list-style-type: none;
+        padding: 0px;
+        margin: 0px;
         display: flex;
         align-items: center;
         gap: 30px;
-        list-style: none;
         font-size: 20px;
+
+        a{
+            text-decoration: none;
+        }
+        .active{
+            border-bottom: 1px solid $color_blue ;
+        }
     }
     .navbar-right{
         display: flex;
