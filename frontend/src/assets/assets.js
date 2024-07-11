@@ -79,7 +79,7 @@ export const menu_list = [
 
 export const food_list = [
     {
-        _id: 1,
+        _id: '1',
         name: 'Caesar Salad',
         image: food_1,
         price: 10,
@@ -87,7 +87,7 @@ export const food_list = [
         description: 'Fresh romaine lettuce, croutons and caesar dressing',
     },
     {
-        _id: 2,
+        _id: '2',
         name: 'Greek Salad',
         image: food_2,
         price: 12,
@@ -95,7 +95,7 @@ export const food_list = [
         description: 'Fresh romaine lettuce, cucumbers, tomatoes and greek dressing',
     },
     {
-        _id: 3,
+        _id: '3',
         name: 'Veggie Salad',
         image: food_3,
         price: 10,
@@ -103,7 +103,7 @@ export const food_list = [
         description: 'Fresh romaine lettuce, cucumbers, tomatoes and ranch dressing',
     },
     {
-        _id: 4,
+        _id: '4',
         name: 'Chicken Salad',
         image: food_4,
         price: 15,
@@ -111,7 +111,7 @@ export const food_list = [
         description: 'Fresh romaine lettuce, grilled chicken and ranch dressing',
     },
     {
-        _id: 5,
+        _id: '5',
         name: 'Bread Sandwich',
         image: food_5,
         price: 8,
@@ -119,7 +119,7 @@ export const food_list = [
         description: 'Freshly baked bread, lettuce, tomatoes and cheese',
     },
     {
-        _id: 6,
+        _id: '6',
         name: 'Vegan Sandwich',
         image: food_6,
         price: 10,
@@ -127,7 +127,7 @@ export const food_list = [
         description: 'Freshly baked bread, lettuce, cucumbers and hummus',
     },
     {
-        _id: 7,
+        _id: '7',
         name: 'Egg Sandwich',
         image: food_7,
         price: 10,
@@ -135,7 +135,7 @@ export const food_list = [
         description: 'Freshly baked bread, lettuce, tomatoes, eggs and mayo',
     },
     {
-        _id: 8,
+        _id: '8',
         name: 'Chicken Sandwich',
         image: food_8,
         price: 12,
@@ -143,7 +143,7 @@ export const food_list = [
         description: 'Freshly baked bread, lettuce, grilled chicken and mayo',
     },
     {
-        _id: 9,
+        _id: '9',
         name: 'Pepperoni Pizza',
         image: food_9,
         price: 15,
@@ -151,7 +151,7 @@ export const food_list = [
         description: 'Freshly baked pizza dough, mozzarella cheese and pepperoni',
     },
     {
-        _id: 10,
+        _id: '10',
         name: 'Salami Pizza',
         image: food_10,
         price: 15,
@@ -159,7 +159,7 @@ export const food_list = [
         description: 'Freshly baked pizza dough, mozzarella cheese and salami',
     },
     {
-        _id: 11,
+        _id: '11',
         name: 'Vegan Pizza',
         image: food_11,
         price: 15,
@@ -167,7 +167,7 @@ export const food_list = [
         description: 'Freshly baked pizza dough, vegan cheese and veggies',
     },
     {
-        _id: 12,
+        _id: '12',
         name: 'Gourmet Pizza',
         image: food_12,
         price: 20,
@@ -175,7 +175,7 @@ export const food_list = [
         description: 'Freshly baked pizza dough, mozzarella cheese and veggies',
     },
     {
-        _id: 13,
+        _id: '13',
         name: 'Apple Pie',
         image: food_13,
         price: 10,
@@ -183,7 +183,7 @@ export const food_list = [
         description: 'Freshly baked apple pie with vanilla ice cream',
     },
     {
-        _id: 14,
+        _id: '14',
         name: 'Cheese Cake',
         image: food_14,
         price: 10,
@@ -191,7 +191,7 @@ export const food_list = [
         description: 'New York style cheesecake with strawberry sauce',
     },
     {
-        _id: 15,
+        _id: '15',
         name: 'Chocolate Cake',
         image: food_15,
         price: 10,
@@ -199,7 +199,7 @@ export const food_list = [
         description: 'Rich chocolate cake with chocolate ganache',
     },
     {
-        _id: 16,
+        _id: '16',
         name: 'Ice Cream Sundae',
         image: food_16,
         price: 10,
