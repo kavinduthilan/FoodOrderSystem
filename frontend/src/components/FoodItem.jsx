@@ -1,21 +1,29 @@
-import React,{useContext} from 'react'
+import { useContext } from 'react';
 import '../sass/FoodItem.scss'
 import { assets } from '../assets/assets';
 import { StoreContext } from '../context/StoreContext';
 
 
-const FoodItem = ({ id,image, name, description, price }) => {
+const FoodItem = ({ id,name,description,image, price}) => {
     
     const {amount,addToCart,removeFromCart} = useContext(StoreContext);
-    console.log(`Rendering FoodItem ${id}:`, amount[id]); // Debug log
+    
+    if (!amount) {
+        console.error('amount is undefined');
+        return null; // or a fallback UI
+    }
 
+    console.log('FoodItem rendered');
+    console.log('amount:', amount);
+    console.log(`Rendering FoodItem ${id}:`, amount[id]);
+    
     return (
         <div className='food-item'>
             <img src={image} alt='' />
             <div className='food-item-content'>
                 <h2>{name}</h2>
                 <p>{description}</p>
-                <h3>${price}</h3>
+                <p>${price}</p>
                 {
                     !amount[id] ?
                         <img className='add' onClick={()=> addToCart(id)} src={assets.add_icon_white} alt="" />
@@ -31,4 +39,4 @@ const FoodItem = ({ id,image, name, description, price }) => {
     )
 }
 
-export default FoodItem;
+export default FoodItem

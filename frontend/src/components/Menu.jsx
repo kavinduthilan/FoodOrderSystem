@@ -1,15 +1,10 @@
 import React from 'react'
 import '../sass/Menu.scss'
-import { useContext } from 'react';
-import { StoreContext } from '../context/StoreContext';
+import { menu_list } from '../assets/assets.js'
 
-const Menu = () => {
-
-  const { menu_list } = useContext(StoreContext);
+const Menu = ({category,setCategory}) => {
   
-  const Clickhere = () => {
-    
-   }
+  
 
   return (
     <div className='menu'>
@@ -28,8 +23,8 @@ const Menu = () => {
         <div className='menu-category'>
         {menu_list.map((item, index) => {
           return (
-            <div key={index} className='menu-category-item'>
-              <img onClick={Clickhere()} src={item.menu_image} alt='' />
+            <div onClick={()=> setCategory(prev=>prev===item.menu_name?"All":item.menu_name)}  key={index} className='menu-category-item'>
+              <img className={category===item.menu_name?"active":""} src={item.menu_image} alt='' />
               <h2>{item.menu_name}</h2>
             </div>
             )

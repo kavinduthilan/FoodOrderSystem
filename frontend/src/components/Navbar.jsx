@@ -20,11 +20,8 @@ const Navbar = () => {
             </ul>
           <div className='navbar-right'>
               <div className='cart'>
-              <img src={assets.cart} alt='' />
-                {
-                  <div className={getTotalCartAmount()==0?"":"dot"}></div>
-                }
-                
+                <img src={assets.cart} alt='' />
+                <div className={getTotalCartAmount()==0?"":"dot"}></div>
               </div>
               <button>Sign in</button>
           </div>
