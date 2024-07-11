@@ -7,7 +7,7 @@ const Menu = ({category,setCategory}) => {
   
 
   return (
-    <div className='menu'>
+    <div className='menu' id='menu'>
         <h1>Discover our Delicious menu</h1>      
         <p className="menu-description">
               At Bites 404, we believe that food should be an experience, a
