@@ -24,7 +24,7 @@ const Navbar = () => {
             </ul>
           <div className='navbar-right'>
               <div className='cart'>
-                <img src={assets.cart} alt='' />
+                <Link to='/cart'><img src={assets.cart} alt='' /></Link>
                 <div className={getTotalCartAmount()===0? "":"dot"}></div>
               </div>
               <button>Sign in</button>
