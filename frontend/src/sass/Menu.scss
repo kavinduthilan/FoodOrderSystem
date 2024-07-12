@@ -11,4 +11,20 @@ $color_red: #AC3B61;
         padding-bottom: 20px;
     }
 
+    .menu-description{
+        justify-content: center;
+        font-size: 18px;
+
+    }
+
+    .menu-category{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 50px;
+
+        .menu-category-item{
+            cursor: pointer;
+        }
+    }
+
 }
