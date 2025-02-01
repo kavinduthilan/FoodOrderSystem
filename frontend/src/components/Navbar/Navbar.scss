@@ -3,6 +3,7 @@ $color_secondary: #EEE2DC;
 $color_tertiary: #BAB2B5;
 $color_blue: #123C69;
 $color_red: #AC3B61;
+$color_black: #000000;
 
 
 .navbar{
@@ -25,12 +26,12 @@ $color_red: #AC3B61;
         align-items: center;
         gap: 30px;
         font-size: 20px;
-
         a{
+            color: $color_black;
             text-decoration: none;
         }
         .active{
-            border-bottom: 1px solid $color_blue ;
+            border-bottom: 1px solid $color_black;
         }
     }
     .navbar-right{
@@ -63,6 +64,7 @@ $color_red: #AC3B61;
             border-radius: 5px;
             padding: 10px;
             margin-left: 20px;
+            cursor: pointer;
         }
     }
 }
