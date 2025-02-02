@@ -1,56 +1,53 @@
-$color_primary: #EDC7B7;
-$color_secondary: #EEE2DC;
-$color_tertiary: #BAB2B5;
-$color_blue: #123C69;
-$color_red: #AC3B61;
+$color_primary: #edc7b7;
+$color_secondary: #eee2dc;
+$color_tertiary: #bab2b5;
+$color_blue: #123c69;
+$color_red: #ac3b61;
 
-.cart{
-    .cart-items{
-        margin-top: 50px;
+.cart {
+  .cart-items {
+    margin-top: 50px;
 
-        .cart-items-title{
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-            align-items: center;
-        }
-
-        .cart-items-list{
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-            align-items: center;
-
-            img{
-                width: 50px;
-                height: 50px;
-            }
-
-            .remove{
-                cursor: pointer;
-            }
-        }
+    .cart-items-title {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+      align-items: center;
     }
 
-    .cart-total{
-        
-        h2{
-            margin-top: 50px;
-            margin-bottom: 20px;
-        }
-        
-        .cart-total-details{
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            align-items: center;
-            margin-bottom: 10px;
-             
-        }
+    .cart-items-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+      align-items: center;
 
-        button{
-            padding: 10px;
-            background-color: $color_primary;
-            border-radius: 5px;
-            cursor: pointer;
-            
-        }
+      img {
+        width: 50px;
+        height: 50px;
+      }
+
+      .remove {
+        cursor: pointer;
+      }
     }
+  }
+
+  .cart-total {
+    h2 {
+      margin-top: 50px;
+      margin-bottom: 20px;
+    }
+
+    .cart-total-details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .checkout-btn {
+      padding: 10px;
+      background-color: $color_primary;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
 }

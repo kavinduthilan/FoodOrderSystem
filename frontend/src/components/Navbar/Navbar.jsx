@@ -5,7 +5,7 @@ import { useContext } from "react";
 import { StoreContext } from "../../context/StoreContext";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ setShowSignIn }) => {
   const [state, setState] = useState("home");
   const { getTotalCartAmount } = useContext(StoreContext);
 
@@ -44,7 +44,9 @@ const Navbar = () => {
           </Link>
           <div className={getTotalCartAmount() === 0 ? "" : "dot"}></div>
         </div>
-        <button>Sign in</button>
+        <button className="sign-in-btn" onClick={() => setShowSignIn(true)}>
+          Sign in
+        </button>
       </div>
     </div>
   );

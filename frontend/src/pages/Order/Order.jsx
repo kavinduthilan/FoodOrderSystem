@@ -45,7 +45,7 @@ function Order() {
             <p>${getTotalCartAmount() + 2}</p>
           </div>
           <Link to={"/payment"}>
-            <button>Proceed to Payment</button>
+            <button className="payment-button">Proceed to Payment</button>
           </Link>
         </div>
       </div>

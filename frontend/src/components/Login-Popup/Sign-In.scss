@@ -1,0 +1,51 @@
+$color_primary: #edc7b7;
+$color_secondary: #eee2dc;
+$color_tertiary: #bab2b5;
+$color_blue: #123c69;
+$color_red: #ac3b61;
+$color_black: #000000;
+
+.sign-in {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+
+  &-container {
+    place-self: center;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 4px;
+    padding: 25px 30px;
+    background-color: $color_tertiary;
+
+    h2 {
+      text-align: center;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 4px;
+      border: 1px solid $color_black;
+    }
+
+    .login-in-btn {
+      background-color: $color_primary;
+      color: $color_black;
+      border-radius: 4px;
+      padding: 10px;
+      border: 1px solid $color_black;
+      cursor: pointer;
+    }
+
+    span {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+}

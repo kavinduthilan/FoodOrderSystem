@@ -1,57 +1,53 @@
-$color_primary: #EDC7B7;
-$color_secondary: #EEE2DC;
-$color_tertiary: #BAB2B5;
-$color_blue: #123C69;
-$color_red: #AC3B61;
+$color_primary: #edc7b7;
+$color_secondary: #eee2dc;
+$color_tertiary: #bab2b5;
+$color_blue: #123c69;
+$color_red: #ac3b61;
 $color_black: #000000;
 
-.order{
-     display: flex;
-     align-items: start;
-     justify-content: space-between;
-     gap: 200px;
+.order {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 200px;
 
-     .order-left {
-          width: 100%;
+  .order-left {
+    width: 100%;
 
-          input{
-               width: 100%;
-               margin-bottom: 15px;
-               border-radius: 4px;
-               border: 1px solid $color_blue;
-               padding: 10px;
-          }
+    input {
+      width: 100%;
+      margin-bottom: 15px;
+      border-radius: 4px;
+      border: 1px solid $color_blue;
+      padding: 10px;
+    }
 
-          .multiple-input{
-               display: flex;
-               gap: 10px;
-          }
-     }
+    .multiple-input {
+      display: flex;
+      gap: 10px;
+    }
+  }
 
+  .order-right {
+    width: 100%;
 
+    h2 {
+      margin-top: 50px;
+      margin-bottom: 20px;
+    }
 
-     .order-right {
-          width: 100%;
-     
-               h2 {
-                    margin-top: 50px;
-                    margin-bottom: 20px;
-               }
-     
-               .cart-total-details {
-                    display: grid;
-                    grid-template-columns: 1fr 1fr;
-                    align-items: center;
-                    margin-bottom: 10px;
-     
-               }
-     
-               button {
-                    padding: 10px;
-                    background-color: $color_primary;
-                    border-radius: 5px;
-                    cursor: pointer;
-     
-               }
-          }
+    .cart-total-details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .payment-button {
+      padding: 10px;
+      background-color: $color_primary;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
 }

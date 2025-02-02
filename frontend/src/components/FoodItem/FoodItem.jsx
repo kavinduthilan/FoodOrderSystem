@@ -31,9 +31,13 @@ const FoodItem = ({ id, name, description, image, price }) => {
           />
         ) : (
           <div className="food-item-amount">
-            <button onClick={() => removeFromCart(id)}>-</button>
+            <button className="remove-btn" onClick={() => removeFromCart(id)}>
+              -
+            </button>
             <p>{amount[id]}</p>
-            <button onClick={() => addToCart(id)}>+</button>
+            <button className="add-to-cart-btn" onClick={() => addToCart(id)}>
+              +
+            </button>
           </div>
         )}
       </div>
