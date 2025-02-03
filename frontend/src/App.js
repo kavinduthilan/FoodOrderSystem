@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <div className="app">
-        {showSignIn ? <SignIn setShowLogin={setShowSignIn} /> : null}
+        {showSignIn ? <SignIn setShowSignIn={setShowSignIn} /> : null}
         <Navbar setShowSignIn={setShowSignIn} />
         <Routes>
           <Route path="/" element={<Home />} />

@@ -7,7 +7,12 @@ import { Link } from "react-router-dom";
 
 const Navbar = ({ setShowSignIn }) => {
   const [state, setState] = useState("home");
-  const { getTotalCartAmount } = useContext(StoreContext);
+  const { getTotalCartAmount, token, setToken } = useContext(StoreContext);
+
+  const logOut = () => {
+    localStorage.removeItem("token");
+    setToken(null);
+  };
 
   return (
     <div className="navbar">
@@ -44,9 +49,22 @@ const Navbar = ({ setShowSignIn }) => {
           </Link>
           <div className={getTotalCartAmount() === 0 ? "" : "dot"}></div>
         </div>
-        <button className="sign-in-btn" onClick={() => setShowSignIn(true)}>
-          Sign in
-        </button>
+        {!token ? (
+          <button className="sign-in-btn" onClick={() => setShowSignIn(true)}>
+            Sign in
+          </button>
+        ) : (
+          <div className="navbar-right-profile">
+            <img id="profile" src={assets.profile} alt="" />
+
+            <ul className="navbar-right-profile-dropdown">
+              <li onClick={logOut}>
+                <img src={assets.logOut} alt="" />
+                <p>LogOut</p>
+              </li>
+            </ul>
+          </div>
+        )}
       </div>
     </div>
   );

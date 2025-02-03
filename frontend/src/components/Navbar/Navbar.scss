@@ -65,5 +65,33 @@ $color_black: #000000;
       margin-left: 20px;
       cursor: pointer;
     }
+
+    &-profile {
+      position: relative;
+      margin-left: 10px;
+
+      img {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+      }
+
+      &-dropdown {
+        position: absolute;
+        display: none;
+
+        li {
+          list-style-type: none;
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+        }
+      }
+
+      &:hover .navbar-right-profile-dropdown {
+        display: flex;
+        flex-direction: column;
+      }
+    }
   }
 }

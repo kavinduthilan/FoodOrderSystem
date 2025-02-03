@@ -43,6 +43,11 @@ import facebook from "./facebook.png";
 import instagram from "./instagram.png";
 import tiktok from "./tiktok.png";
 
+//other icons
+import close from "./close.png";
+import profile from "./user.png";
+import logOut from "./logout.png";
+
 export const assets = {
   logo,
   cart,
@@ -56,6 +61,9 @@ export const assets = {
   facebook,
   instagram,
   tiktok,
+  profile,
+  close,
+  logOut,
 };
 
 export const menu_list = [
