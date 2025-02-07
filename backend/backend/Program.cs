@@ -22,6 +22,7 @@ builder.Services.Configure<FoodStore>(
 
 // Add Service
 builder.Services.AddSingleton<UserService>();
+builder.Services.AddSingleton<FoodService>();
 builder.Services.AddSingleton<JwtTokenGenerator>();
 
 // Add Jwt Authentication
@@ -60,7 +61,7 @@ builder.Services.AddCors(
                   .AllowAnyHeader();
               });
       }
-      
+
     );
 
 
