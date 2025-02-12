@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace backend.Controllers
 {
+
     [Authorize]
     [ApiController]
     [Route("[controller]")]
@@ -16,7 +17,7 @@ namespace backend.Controllers
     {
         private readonly FoodService _foodService;
 
-        private string bucketName ="myawsbucket-kavi98";
+        private string bucketName = "myawsbucket-kavi98";
         public FoodController(FoodService foodService)
         {
             _foodService = foodService;
@@ -47,45 +48,40 @@ namespace backend.Controllers
 
                 var response = await client.PutObjectAsync(putRequest);
 
+                var objectUrl = "https://myawsbucket-kavi98.s3.ap-south-1.amazonaws.com/${keyFile}";
+
                 // Add food to database
                 var foodItem = new Food
                 {
                     Name = food.Name,
                     Description = food.Description,
                     Price = food.Price,
-                    Image = keyFile
+                    Image = objectUrl,
+                    Category = food.Category
                 };
-                
-                
-                 await _foodService.addFood(foodItem);
+
+
+                await _foodService.addFood(foodItem);
 
                 return Ok(foodItem);
-                
-            }
-            
 
-            return Ok();
-            
-        }
-
-        [HttpGet]
-        public async Task GetFood()
-        {
-            var client = new AmazonS3Client();
-
-            var bucketExist = await AmazonS3Util.DoesS3BucketExistV2Async(client, bucketName);
-
-            if (bucketExist)
-            {
-                Console.WriteLine("Bucket exists");
             }
             else
             {
-               Console.WriteLine("Bucket does not exist");
+                Console.WriteLine("Bucket does not exist");
             }
 
-            
-            
+
+            return Ok();
+
+        }
+
+        [HttpGet]
+        public async Task<ActionResult<List<Food>>> GetFoods()
+        {
+            var foods = await _foodService.GetAllFoodsAsync();
+
+            return Ok(foods);
         }
 
 
