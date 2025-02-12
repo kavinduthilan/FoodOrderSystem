@@ -1,13 +1,15 @@
-import { createContext } from "react";
+import axios from "axios";
+import { createContext, useEffect } from "react";
 import { useState } from "react";
-import { food_list } from "../assets/assets.js";
 
 export const StoreContext = createContext(null);
 
 const ContextProvider = (props) => {
   const [amount, setAmount] = useState({});
   const [token, setToken] = useState(null);
-  const url = "https://localhost:5000/User";
+  const url = "https://localhost:7256/User";
+
+  const [food_list, setFood_list] = useState([]);
 
   const addToCart = (itemId) => {
     if (!amount[itemId]) {
@@ -26,12 +28,23 @@ const ContextProvider = (props) => {
     for (const item in amount) {
       if (amount[item] > 0) {
         let itemInfo = food_list.find((product) => product._id === item);
-        console.log("itemInfo:", itemInfo);
         totalAmount += itemInfo.price * amount[item];
       }
     }
     return totalAmount;
   };
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const response = await axios.get("https://localhost:7256/Food");
+        setFood_list(response.data);
+      } catch (error) {
+        console.error(error);
+      }
+    }
+    fetchData();
+  }, []);
 
   const contextValue = {
     food_list,
