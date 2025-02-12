@@ -29,13 +29,6 @@ const SignIn = ({ setShowSignIn }) => {
       setToken(res.data.token);
       localStorage.setItem("token", res.data.token);
       setShowSignIn(false);
-
-      // if (res.data.success) {
-      //   setToken(res.data.token);
-      //   localStorage.setItem("token", res.data.token);
-      //   setShowSignIn(false);
-      //   console.log("sent");
-      // }
     } catch (error) {
       console.log(error);
     }

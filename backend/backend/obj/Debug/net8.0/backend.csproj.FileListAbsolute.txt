@@ -53,3 +53,5 @@ D:\projects\FoodOrderSystem\backend\backend\obj\Debug\net8.0\refint\backend.dll
 D:\projects\FoodOrderSystem\backend\backend\obj\Debug\net8.0\backend.pdb
 D:\projects\FoodOrderSystem\backend\backend\obj\Debug\net8.0\backend.genruntimeconfig.cache
 D:\projects\FoodOrderSystem\backend\backend\obj\Debug\net8.0\ref\backend.dll
+D:\projects\FoodOrderSystem\backend\backend\bin\Debug\net8.0\AWSSDK.Core.dll
+D:\projects\FoodOrderSystem\backend\backend\bin\Debug\net8.0\AWSSDK.S3.dll
