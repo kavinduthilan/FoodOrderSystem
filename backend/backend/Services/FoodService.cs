@@ -25,5 +25,11 @@ namespace backend.Services
             await _foodCollection.InsertOneAsync(food);
 
         }
+
+        public async Task<List<Food>> GetAllFoodsAsync()
+        {
+            
+            return await _foodCollection.Find(food => true).ToListAsync();
+        }
     }
 }
