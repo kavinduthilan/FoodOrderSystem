@@ -37,7 +37,12 @@ const ContextProvider = (props) => {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await axios.get("https://localhost:7256/Food");
+        const token = localStorage.getItem("token");
+        const response = await axios.get("https://localhost:7256/Food", {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
         setFood_list(response.data);
       } catch (error) {
         console.error(error);

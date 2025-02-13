@@ -6,7 +6,7 @@ import "./FoodDisplay.scss";
 const FoodDisplay = ({ category }) => {
   const { food_list } = useContext(StoreContext);
 
-  // console.log(food_list);
+  console.log(food_list);
 
   return (
     <div className="food-display">
