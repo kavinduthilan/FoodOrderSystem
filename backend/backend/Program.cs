@@ -21,9 +21,9 @@ builder.Services.Configure<FoodStore>(
     );
 
 // Add Service
-builder.Services.AddSingleton<UserService>();
-builder.Services.AddSingleton<FoodService>();
-builder.Services.AddSingleton<JwtTokenGenerator>();
+builder.Services.AddScoped<UserService>();
+builder.Services.AddScoped<FoodService>();
+builder.Services.AddScoped<JwtTokenGenerator>();
 
 // Add Jwt Authentication
 builder.Services.AddAuthentication(options =>
