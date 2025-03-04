@@ -27,10 +27,10 @@ namespace backend.Controllers
         [Consumes("multipart/form-data")]
         public async Task<ActionResult> AddFood([FromForm] FoodRequestDto food)
         {
-            var client = new AmazonS3Client();
+            // var client = new AmazonS3Client();
 
-            var bucketExist = await AmazonS3Util.DoesS3BucketExistV2Async(client, bucketName);
-
+            // var bucketExist = await AmazonS3Util.DoesS3BucketExistV2Async(client, bucketName);
+            /*
             if (bucketExist)
             {
                 Console.WriteLine("Bucket exists");
@@ -50,13 +50,14 @@ namespace backend.Controllers
 
                 var objectUrl = "https://myawsbucket-kavi98.s3.ap-south-1.amazonaws.com/${keyFile}";
 
+            */
+
                 // Add food to database
                 var foodItem = new Food
                 {
                     Name = food.Name,
                     Description = food.Description,
                     Price = food.Price,
-                    Image = objectUrl,
                     Category = food.Category
                 };
 
@@ -65,14 +66,7 @@ namespace backend.Controllers
 
                 return Ok(foodItem);
 
-            }
-            else
-            {
-                Console.WriteLine("Bucket does not exist");
-            }
-
-
-            return Ok();
+            
 
         }
 
