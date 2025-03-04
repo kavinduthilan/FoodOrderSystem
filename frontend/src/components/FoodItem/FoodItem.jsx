@@ -8,7 +8,7 @@ const FoodItem = ({ id, name, description, image, price }) => {
 
   if (!amount) {
     // console.error("amount is undefined");
-    return null; // or a fallback UI
+    return null; 
   }
 
   return (
