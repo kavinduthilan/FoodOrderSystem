@@ -7,13 +7,8 @@ const FoodItem = ({ id, name, description, image, price }) => {
   const { amount, addToCart, removeFromCart } = useContext(StoreContext);
 
   if (!amount) {
-    // console.error("amount is undefined");
-    return null; 
+    return null;
   }
-
-  // console.log("FoodItem rendered");
-  // console.log("amount:", amount);
-  // console.log(`Rendering FoodItem ${id}:`, amount[id]);
 
   return (
     <div className="food-item">

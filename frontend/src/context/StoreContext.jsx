@@ -7,7 +7,7 @@ export const StoreContext = createContext(null);
 const ContextProvider = (props) => {
   const [amount, setAmount] = useState({});
   const [token, setToken] = useState(null);
-  const url = "https://localhost:5000/User";
+  const url = "https://localhost:7256/User";
 
   const addToCart = (itemId) => {
     if (!amount[itemId]) {

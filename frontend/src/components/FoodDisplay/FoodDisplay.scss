@@ -1,18 +1,18 @@
-$color_primary: #EDC7B7;
-$color_secondary: #EEE2DC;
-$color_tertiary: #BAB2B5;
-$color_blue: #123C69;
-$color_red: #AC3B61;
+$color_primary: #edc7b7;
+$color_secondary: #eee2dc;
+$color_tertiary: #bab2b5;
+$color_blue: #123c69;
+$color_red: #ac3b61;
 
-.food-display{
-    .food-display-title{
-        color: $color_blue;
-        padding-bottom: 20px;
-    }
-    .food-display-list{
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 20px;
-        background-color: $color_secondary;
-    }
+.food-display {
+  .food-display-title {
+    color: $color_blue;
+    padding-bottom: 20px;
+  }
+  .food-display-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    background-color: $color_secondary;
+  }
 }
