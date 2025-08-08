@@ -14,5 +14,7 @@ namespace backend.Data
 
           public DbSet<User> User { get; set; }
           public DbSet<Food> Food { get; set; }
+          public DbSet<Order> Order { get; set; }
+          public DbSet<OrderItem> OrderItem { get; set; }
      }
 }

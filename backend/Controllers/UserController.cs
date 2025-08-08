@@ -20,7 +20,7 @@ namespace backend.Controllers
         }
 
 
-        [HttpPost("register")]
+        [HttpPost("Register")]
         public async Task<IActionResult> Create([FromBody] UserRequestDto userRequestDto)
         {
             if (!ModelState.IsValid)
@@ -40,7 +40,7 @@ namespace backend.Controllers
         }
 
 
-        [HttpPost("login")]
+        [HttpPost("Login")]
         public async Task<IActionResult> Login([FromBody] UserRequestDto user)
         {
             try

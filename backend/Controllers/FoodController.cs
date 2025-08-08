@@ -1,5 +1,7 @@
-﻿using backend.Models.Dtos;
+﻿using backend.Models;
+using backend.Models.Dtos;
 using backend.Services;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 namespace backend.Controllers
@@ -17,11 +19,11 @@ namespace backend.Controllers
         }
 
         [HttpPost("Create")]
-        public IActionResult Create([FromBody] FoodRequestDto food)
+        public async Task<IActionResult> Create([FromBody] FoodRequestDto food)
         {
             try
             {
-                var result = _foodService.createFood(food);
+                var result = await _foodService.CreateFood(food);
                 return Ok(result);
             }
             catch (Exception ex)
@@ -30,5 +32,21 @@ namespace backend.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        [HttpGet("GetAll")]
+        public async Task<IActionResult> GetAll()
+        {
+            try
+            {
+                var result = await _foodService.GetAll();
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, ex.Message);
+                return BadRequest(ex.Message);
+            }
+        }
+
     }
 }
