@@ -1,0 +1,107 @@
+[
+  {
+    "name": "Greek Salad",
+    "price": 12.00,
+    "category": "Salad",
+    "description": "Fresh romaine lettuce, cucumbers, tomatoes and greek dressing",
+    "imageUrl": "img2"
+  },
+  {
+    "name": "Veggie Salad",
+    "price": 10.00,
+    "category": "Salad",
+    "description": "Fresh romaine lettuce, cucumbers, tomatoes and ranch dressing",
+    "imageUrl": "img3"
+  },
+  {
+    "name": "Chicken Salad",
+    "price": 15.99,
+    "category": "Salad",
+    "description": "Fresh romaine lettuce, grilled chicken and ranch dressing",
+    "imageUrl": "img4"
+  },
+  {
+    "name": "Bread Sandwich",
+    "price": 8.00,
+    "category": "Sandwich",
+    "description": "Freshly baked bread, lettuce, tomatoes and cheese",
+    "imageUrl": "img5"
+  },
+  {
+    "name": "Vegan Sandwich",
+    "price": 12.50,
+    "category": "Sandwich",
+    "description": "Freshly baked bread, lettuce, cucumbers and hummus",
+    "imageUrl": "img6"
+  },
+  {
+    "name": "Egg Sandwich",
+    "price": 10.00,
+    "category": "Sandwich",
+    "description": "Freshly baked bread, lettuce, tomatoes, eggs and mayo",
+    "imageUrl": "img7"
+  },
+  {
+    "name": "Chicken Sandwich",
+    "price": 12.00,
+    "category": "Sandwich",
+    "description": "Freshly baked bread, lettuce, grilled chicken and mayo",
+    "imageUrl": "img8"
+  },
+  {
+    "name": "Pepperoni Pizza",
+    "price": 15.99,
+    "category": "Pizza",
+    "description": "Freshly baked pizza dough, cheese and pepperoni",
+    "imageUrl": "img9"
+  },
+  {
+    "name": "Salami Pizza",
+    "price": 49.99,
+    "category": "Pizza",
+    "description": "Freshly baked pizza dough, cheese and salami",
+    "imageUrl": "img10"
+  },
+  {
+    "name": "Vegan Pizza",
+    "price": 17.99,
+    "category": "Pizza",
+    "description": "Freshly baked pizza dough, vegan cheese and veggies",
+    "imageUrl": "img11"
+  },
+  {
+    "name": "Gourmet Pizza",
+    "price": 20.00,
+    "category": "Pizza",
+    "description": "Freshly baked pizza dough, cheese and veggies",
+    "imageUrl": "img12"
+  },
+  {
+    "name": "Apple Pie",
+    "price": 19.99,
+    "category": "Dessert",
+    "description": "Freshly baked apple pie with vanilla ice cream",
+    "imageUrl": "img13"
+  },
+  {
+    "name": "Cheese Cake",
+    "price": 69.00,
+    "category": "Dessert",
+    "description": "New York style cheesecake with strawberry sauce",
+    "imageUrl": "img14"
+  },
+  {
+    "name": "Chocolate Cake",
+    "price": 25.00,
+    "category": "Dessert",
+    "description": "Rich chocolate cake with chocolate ganache",
+    "imageUrl": "img15"
+  },
+  {
+    "name": "Ice Cream Sundae",
+    "price": 10,
+    "category": "Dessert",
+    "description": "Vanilla ice cream with chocolate sauce",
+    "imageUrl": "img16"
+  }
+]

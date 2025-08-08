@@ -1,40 +1,83 @@
-import { useContext } from "react";
+import { useState } from "react";
 import "./FoodItem.scss";
-import { assets } from "../../assets/assets";
-import { StoreContext } from "../../context/StoreContext";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart } from "../../store/CartSlice";
 
 const FoodItem = ({ id, name, description, image, price }) => {
-  const { amount, addToCart, removeFromCart } = useContext(StoreContext);
+  const [quantity, setQuantity] = useState(1);
+  // const [isShow, setIsShow] = useState(false);
 
-  if (!amount) {
-    return null;
+  const nb = useSelector((state)=> state.cart.quantity[id] || 0);
+  
+
+  const dispatch = useDispatch();
+
+  const handleAddToCart = () =>  {
+    dispatch(addToCart({
+      id,
+      price,
+      quantity
+    }));
+    // setIsShow(true);
   }
+
+  
+
+
+
+  const decrement = () => {
+    const newQuantity =  quantity - 1;
+    setQuantity(newQuantity);
+    dispatch(addToCart({id, price, quantity: newQuantity}))
+  };
+
+  const increment =  () => {
+    const newQuantity = quantity+1;
+    setQuantity(newQuantity);
+    dispatch(dispatch(addToCart({
+      id,
+      price,
+      quantity: newQuantity
+    })))
+  };
 
   return (
     <div className="food-item">
       <img src={image} alt="" />
       <div className="food-item-content">
         <h2>{name}</h2>
-        <p>{description}</p>
-        <p>${price}</p>
-        {!amount[id] ? (
-          <img
-            className="add"
-            onClick={() => addToCart(id)}
-            src={assets.add_icon_white}
-            alt=""
-          />
-        ) : (
-          <div className="food-item-amount">
-            <button className="remove-btn" onClick={() => removeFromCart(id)}>
-              -
-            </button>
-            <p>{amount[id]}</p>
-            <button className="add-to-cart-btn" onClick={() => addToCart(id)}>
-              +
+        <div className="description">{description}</div>
+        {/* <div className="price">${price}</div> */}
+
+        <div className="food-item-amount">
+        <div className="price">${price}</div>
+          
+
+          <div className="add-to-cart-btn" hidden={nb > 0}>
+            <button className="add-btn" onClick={handleAddToCart}> 
+              Add to Cart
             </button>
           </div>
-        )}
+
+          {nb > 0  && (
+            <div className="food-item-amount-controls">
+              <button
+                className="decrement-btn"
+                onClick={decrement}
+              >
+                -
+              </button>
+
+              <span className="quantity">{quantity}</span>
+              <button
+                className="increment-btn"
+                onClick={increment}
+              >
+                +
+              </button>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

@@ -19,6 +19,7 @@ $color_red: #AC3B61;
 
     .menu-category{
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-around;
         margin-top: 50px;
 

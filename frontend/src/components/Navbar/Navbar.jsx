@@ -1,17 +1,23 @@
 import React, { useState } from "react";
 import { assets } from "../../assets/assets";
 import "./Navbar.scss";
-import { useContext } from "react";
-import { StoreContext } from "../../context/StoreContext";
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { setToken } from "../../store/AuthSlice";
 
 const Navbar = ({ setShowSignIn }) => {
   const [state, setState] = useState("home");
-  const { getTotalCartAmount, token, setToken } = useContext(StoreContext);
+  // const { getTotalCartAmount } = useContext(StoreContext);
+
+  const totalAmount = useSelector((state)=> state.cart.totalAmount);
+
+  
+  const dispatch = useDispatch();
+  const token =  useSelector((state) => state.auth.token);
 
   const logOut = () => {
     localStorage.removeItem("token");
-    setToken(null);
+    dispatch(setToken(null));
   };
 
   return (
@@ -19,6 +25,7 @@ const Navbar = ({ setShowSignIn }) => {
       <div className="navbar-logo">
         <img src={assets.logo} alt="" />
       </div>
+      
       <ul className="navbar-menu">
         <Link
           to="/"
@@ -42,16 +49,19 @@ const Navbar = ({ setShowSignIn }) => {
           Contact
         </a>
       </ul>
+
+
       <div className="navbar-right">
         <div className="cart">
           <Link to="/cart">
             <img src={assets.cart} alt="" />
           </Link>
-          <div className={getTotalCartAmount() === 0 ? "" : "dot"}></div>
+          {/* <div className={getTotalCartAmount() === 0 ? "" : "dot"}></div> */}
+          <div className={totalAmount === 0 ? "" : "dot"}></div>
         </div>
         {!token ? (
           <button className="sign-in-btn" onClick={() => setShowSignIn(true)}>
-            Sign in
+            Sign In
           </button>
         ) : (
           <div className="navbar-right-profile">
@@ -66,6 +76,7 @@ const Navbar = ({ setShowSignIn }) => {
           </div>
         )}
       </div>
+
     </div>
   );
 };

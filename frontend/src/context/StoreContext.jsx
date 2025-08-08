@@ -7,7 +7,7 @@ export const StoreContext = createContext(null);
 const ContextProvider = (props) => {
   const [amount, setAmount] = useState({});
   const [token, setToken] = useState(null);
-  const url = "https://localhost:7256/User";
+  const url = "http://localhost:5000/User";
 
   const addToCart = (itemId) => {
     if (!amount[itemId]) {
@@ -26,7 +26,7 @@ const ContextProvider = (props) => {
     for (const item in amount) {
       if (amount[item] > 0) {
         let itemInfo = food_list.find((product) => product._id === item);
-        console.log("itemInfo:", itemInfo);
+        
         totalAmount += itemInfo.price * amount[item];
       }
     }
