@@ -1,38 +1,103 @@
+// 
+
+
+
 $color_primary: #EDC7B7;
 $color_secondary: #EEE2DC;
 $color_tertiary: #BAB2B5;
 $color_blue: #123C69;
 $color_red: #AC3B61;
 
-.footer{
-    //margin-bottom: 0px;
-    margin-top: 100px;
-    background-color: $color_tertiary;
-    height: 200px;
-    padding: 0px 100px;
-    
-    
-    
+.footer {
+  margin-top: 100px;
+  background-color: $color_tertiary;
+  padding: 20px 100px;
 
-    .footer-item{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 50px;
-        
-        .footer-logo{
-            img{
-                width: 200px;
-            }
-        }
-        .footer-social{
-            img{
-                width: 40px;
-                height: 40px;
-                margin-right: 10px;
-                cursor: pointer;
-            }
-        }
+  .footer-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap; // allow wrapping for smaller screens
+
+    .footer-logo img {
+      width: 200px;
+      height: auto;
     }
 
+    .footer-content {
+      p {
+        margin: 4px 0;
+      }
+    }
+
+    .footer-social img {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid rgba(0,0,0,0.2);
+    margin: 10px 0;
+  }
+
+  p {
+    text-align: center;
+    margin: 0;
+    font-size: 14px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  .footer {
+    padding: 20px 50px;
+  }
+
+  .footer-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+
+    .footer-logo img {
+      width: 160px;
+    }
+
+    .footer-social img {
+      width: 35px;
+      height: 35px;
+    }
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .footer {
+    padding: 20px;
+  }
+
+  .footer-item {
+    gap: 15px;
+
+    .footer-logo img {
+      width: 140px;
+    }
+
+    .footer-social img {
+      width: 30px;
+      height: 30px;
+    }
+
+    .footer-content p {
+      font-size: 14px;
+    }
+  }
+
+  p {
+    font-size: 12px;
+  }
 }
