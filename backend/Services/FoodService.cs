@@ -3,6 +3,7 @@ using backend.Models;
 using backend.Models.Dtos;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
 
 namespace backend.Services
 {
@@ -15,7 +16,7 @@ namespace backend.Services
             _context = context;
         }
 
-        public async Task<ActionResult<Food>> createFood(FoodRequestDto food)
+        public async Task<ActionResult<Food>> CreateFood(FoodRequestDto food)
         {
             if (await _context.Food.AnyAsync(u => u.Name == food.Name))
                 throw new Exception("Food Already exists");
@@ -33,6 +34,11 @@ namespace backend.Services
             await _context.SaveChangesAsync();
 
             return newFood;
+        }
+
+        public async Task<IEnumerable<Food>> GetAll()
+        {
+            return await _context.Food.ToListAsync();
         }
 
     }
