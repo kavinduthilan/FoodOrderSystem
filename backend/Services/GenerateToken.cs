@@ -3,7 +3,6 @@ using System.Security.Claims;
 using System.Text;
 using backend.Models;
 using Microsoft.IdentityModel.Tokens;
-using MongoDB.Driver;
 
 public class GenerateToken
 {
